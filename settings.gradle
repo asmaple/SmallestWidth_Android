@@ -3,6 +3,12 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+        maven { url "https://frontjs-static.pgyer.com/dist/sdk/pgyersdk" }
     }
 }
 dependencyResolutionManagement {
@@ -10,6 +16,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+        maven { url "https://frontjs-static.pgyer.com/dist/sdk/pgyersdk" }
     }
 }
 
