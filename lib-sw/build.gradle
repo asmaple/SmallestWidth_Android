@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -33,5 +34,19 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.maple.sw'
+                artifactId = 'sw'
+                version = '1.0.0'
+            }
+        }
     }
 }
